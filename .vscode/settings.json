@@ -7,7 +7,6 @@
     "java.format.comments.enabled": true,
     "java.cleanup.actions": [
         "renameFileToType",
-        "organizeImports",
         "switchExpression",
         "qualifyMembers",
         "qualifyStaticMembers",
