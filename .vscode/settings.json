@@ -1,0 +1,21 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+    "java.format.comments.enabled": true,
+    "java.cleanup.actions": [
+        "renameFileToType",
+        "organizeImports",
+        "switchExpression",
+        "qualifyMembers",
+        "qualifyStaticMembers",
+        "addDeprecated",
+        "stringConcatToTextBlock",
+        "invertEquals",
+        "lambdaExpression",
+        "lambdaExpressionFromAnonymousClass",
+        "renameUnusedLocalVariables"
+    ],
+}
