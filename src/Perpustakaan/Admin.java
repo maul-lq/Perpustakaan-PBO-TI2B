@@ -1,22 +1,19 @@
 package Perpustakaan;
-import java.util.Scanner;
 
 public class Admin {
-    private String pembuatanDataPeminjaman;
+    private String namaAdmin;
+    public String pembuatanDataPeminjaman;
 
-    public void inputData() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Masukkan Data Peminjaman Baru: ");
-        this.pembuatanDataPeminjaman = scanner.nextLine();
-
-        System.out.println("Admin telah memasukkan data peminjaman: " + this.pembuatanDataPeminjaman);
+    public Admin(String namaAdmin, String pembuatanDataPeminjaman) {
+        this.namaAdmin = namaAdmin;
+        this.pembuatanDataPeminjaman = pembuatanDataPeminjaman;
     }
 
-    public void updateData() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Masukkan Data Peminjaman yang ingin diperbarui: ");
-        this.pembuatanDataPeminjaman = scanner.nextLine();
-        System.out.println("Admin telah memperbarui data peminjaman: " + this.pembuatanDataPeminjaman);
+    public String getNamaAdmin() {
+        return this.namaAdmin;
+    }
+
+    public void setNamaAdmin(String namaAdmin) {
+        this.namaAdmin = namaAdmin;
     }
 }

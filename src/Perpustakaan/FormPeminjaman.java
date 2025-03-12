@@ -1,20 +1,15 @@
 package Perpustakaan;
 
-import java.util.Scanner;
-
 public class FormPeminjaman {
-    private String jadwalPeminjamanBuku;
-    private String pengajuanPeminjamanBuku;
+    private String jadwalPeminjaman;
+    private String pengajuanPeminjaman;
 
-    public void inputData() {
-        Scanner scanner = new Scanner(System.in);
+    public FormPeminjaman(String jadwalPeminjaman, String pengajuanPeminjaman) {
+        this.jadwalPeminjaman = jadwalPeminjaman;
+        this.pengajuanPeminjaman = pengajuanPeminjaman;
+    }
 
-        System.out.print("Masukkan Jadwal Peminjaman Buku: ");
-        this.jadwalPeminjamanBuku = scanner.nextLine();
-
-        System.out.print("Masukkan Status Pengajuan Peminjaman Buku: ");
-        this.pengajuanPeminjamanBuku = scanner.nextLine();
-
-        System.out.println("Pengajuan peminjaman buku dengan jadwal: " + this.jadwalPeminjamanBuku + " telah diajukan.");
+    public String getJadwalPeminjaman() {
+        return this.jadwalPeminjaman;
     }
 }
