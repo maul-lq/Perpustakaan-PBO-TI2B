@@ -15,5 +15,11 @@ public class WebSite {
 
     public void updateData(String judulBuku) {
         this.judulBuku = judulBuku;
+        System.out.println("Data Buku telah diupdate: " + this.judulBuku);
+    }
+
+    public void tampilkanWebsite() {
+        System.out.println("Judul Buku di Website: " + this.getJudulBuku());
+        System.out.println(" ");
     }
 }

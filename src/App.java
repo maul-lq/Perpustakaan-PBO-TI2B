@@ -44,23 +44,16 @@ public class App {
 
             switch (pilihan) {
                 case 1:
-                    System.out.println("Customer: " + customer.getUserName());
-                    System.out.println("Buku yang dipinjam: " + customer.getPeminjamanBuku());
-                    System.out.println(" ");
+                    customer.tampilakanCostumer();
                     break;
                 case 2:
-                    System.out.println("Kode Buku: " + buku.getKodeBuku());
-                    System.out.println("Judul Buku: " + buku.getJudulBuku());
-                    System.out.println("Penulis: " + buku.getPenulis());
-                    System.out.println(" ");
+                    buku.tampilkanBuku();
                     break;
                 case 3:
-                    System.out.println("Judul Buku di Website: " + website.getJudulBuku());
-                    System.out.println(" ");
+                    website.tampilkanWebsite();
                     break;
                 case 4:
-                    System.out.println("Jadwal Peminjaman: " + form.getJadwalPeminjaman());
-                    System.out.println(" ");
+                    form.tampilkanPeminjaman();
                     break;
                 case 5:
                     System.out.println("Admin: " + admin.getNamaAdmin());
@@ -81,10 +74,7 @@ public class App {
                     // website.updateData();
                     break;
                 case 9:
-                    System.out.println("Masukkan nama admin:");
-                    in = scanner.nextLine();
-                    admin.setNamaAdmin(in);
-                    // admin.updateData();
+                    admin.updateDataAdmin();
                     break;
                 case 10:
                     System.out.println("Keluar dari sistem...");

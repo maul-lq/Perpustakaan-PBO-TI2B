@@ -26,7 +26,8 @@ public class Customer {
     public void setPeminjamanBuku(String peminjamanBuku) {
         this.peminjamanBuku = peminjamanBuku;
     }
-    public void UpdateCustomer(){
+
+    public void UpdateCustomer() {
         Customer customer = new Customer("johndoe", "securepass", "Harry Potter");
         customer.setUserName("janedoe");
         customer.setPeminjamanBuku("Lord of the Rings");
@@ -34,13 +35,19 @@ public class Customer {
         System.out.println("Updated Buku yang dipinjam: " + customer.getPeminjamanBuku());
     }
 
+    public void tampilakanCostumer() {
+        System.out.println("Customer: " + this.getUserName());
+        System.out.println("Buku yang dipinjam: " + this.getPeminjamanBuku());
+        System.out.println(" ");
+    }
+
     // public boolean login(String x, String y){
-    //     if (this.userName == x && this.password == y){
-    //         return true;
-    //     }
-    //     else{
-    //         return false;
-    //     }
-    //     // return false;
+    // if (this.userName == x && this.password == y){
+    // return true;
+    // }
+    // else{
+    // return false;
+    // }
+    // // return false;
     // }
 }

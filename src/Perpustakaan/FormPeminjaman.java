@@ -12,4 +12,9 @@ public class FormPeminjaman {
     public String getJadwalPeminjaman() {
         return this.jadwalPeminjaman;
     }
+
+    public void tampilkanPeminjaman() {
+        System.out.println("Jadwal Peminjaman: " + this.getJadwalPeminjaman());
+        System.out.println(" ");
+    }
 }

@@ -34,11 +34,19 @@ public class Buku {
     public void setPenulis(String penulis) {
         this.penulis = penulis;
     }
-    public void UpdateBuku(){
+
+    public void UpdateBuku() {
         Buku buku = new Buku("BK001", "The Great Gatsby", "F. Scott Fitzgerald");
         buku.setJudulBuku("1984");
         buku.setPenulis("George Orwell");
         System.out.println("Updated Judul Buku: " + buku.getJudulBuku());
         System.out.println("Updated Penulis: " + buku.getPenulis());
+    }
+
+    public void tampilkanBuku() {
+        System.out.println("Kode Buku: " + this.getKodeBuku());
+        System.out.println("Judul Buku: " + this.getJudulBuku());
+        System.out.println("Penulis: " + this.getPenulis());
+        System.out.println(" ");
     }
 }
