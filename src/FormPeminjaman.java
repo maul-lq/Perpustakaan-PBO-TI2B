@@ -8,7 +8,7 @@ class FormPeminjaman {
     }
 
     public String getJadwalPeminjaman() {
-        return this.jadwalPeminjaman;
+        return jadwalPeminjaman;
     }
     public void InputPeminjaman(){
         FormPeminjaman form = new FormPeminjaman("10 Maret 2025", "Pending");
