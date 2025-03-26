@@ -8,8 +8,13 @@ import Perpustakaan.FormPeminjaman;
 import Perpustakaan.WebSite;
 
 public class App {
+
+    public static ArrayList<Customer> customers = new ArrayList<>();
+
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
+
+        
 
         Customer customer = new Customer("admin", "123", "Harry Potter");
         Buku buku = new Buku("BK001", "The Great Gatsby", "F. Scott Fitzgerald");
@@ -20,7 +25,7 @@ public class App {
 
         while (true) {
             System.out.println("=== Sistem Peminjaman Buku Online ===");
-            System.out.println("1. Tampilkan Customer");
+            System.out.println("1. Menu Customers");
             System.out.println("2. Tampilkan Buku");
             System.out.println("3. Tampilkan Website");
             System.out.println("4. Tampilkan Form Peminjaman");
@@ -45,7 +50,7 @@ public class App {
 
             switch (pilihan) {
                 case 1:
-                    customer.tampilakanCostumer();
+                    App.menuCustomers();
                     break;
                 case 2:
                     buku.tampilkanBuku();
@@ -63,7 +68,7 @@ public class App {
                     // admin.inputData();
                     break;
                 case 6:
-                    customer.UpdateCustomer();
+                    // customer.UpdateCustomer();
                     // customer.updateData();
                     break;
                 case 7:
@@ -91,5 +96,51 @@ public class App {
     private static void clear() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
+    }
+
+    private static void menuCustomers() {
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("=== Menu Customers ===");
+            System.out.println("1. Tampilkan Data Customer");
+            System.out.println("2. Tambah Data Customer");
+            System.out.println("3. Update Data Customer");
+            System.out.println("4. Hapus Data Customer");
+            System.out.println("5. Keluar");
+            System.out.print("Pilih menu: ");
+
+            int pilihan;
+            try {
+                pilihan = scanner.nextInt();
+            } catch (Exception e) {
+                System.out.println("Input harus berupa angka!");
+                pilihan = -1;
+                continue;
+            } finally {
+                scanner.nextLine(); // Mengonsumsi newline
+            }
+
+            switch (pilihan) {
+                case 1:
+                    Customer customer = new Customer(App.customers);
+                    customer.tampilkanCostumer();
+                    break;
+                case 2:
+                    
+                    break;
+                case 3:
+                    // customer.UpdateCustomer();
+                    break;
+                case 4:
+                    // Implementasi hapus data customer
+                    break;
+                case 5:
+                    return;
+                default:
+                    System.out.println("Pilihan tidak valid!");
+                    break;
+            }
+        }
     }
 }
