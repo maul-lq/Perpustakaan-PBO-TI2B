@@ -8,7 +8,7 @@ class WebSite {
     }
 
     public String getJudulBuku() {
-        return judulBuku;
+        return this.judulBuku;
     }
 
     public void updateData(String judulBuku) {

@@ -14,7 +14,7 @@ class Buku {
     }
 
     public String getKodeBuku() {
-        return kodeBuku;
+        return this.kodeBuku;
     }
 
     public void setJudulBuku(String judulBuku) {
@@ -32,15 +32,16 @@ class Buku {
         String judul = scanner.nextLine();
         System.out.print("Masukkan penulis: ");
         String penulis = scanner.nextLine();
-        daftarBuku.add(new Buku(kode, judul, penulis));
+        Buku.daftarBuku.add(new Buku(kode, judul, penulis));
         System.out.println("Buku berhasil ditambahkan.");
     }
 
+
     public static void tampilkanBuku() {
-        if (daftarBuku.isEmpty()) {
+        if (Buku.daftarBuku.isEmpty()) {
             System.out.println("Tidak ada buku dalam daftar.");
         } else {
-            for (Buku buku : daftarBuku) {
+            for (Buku buku : Buku.daftarBuku) {
                 System.out.println(buku);
             }
         }
@@ -49,7 +50,7 @@ class Buku {
     public static void updateBuku(Scanner scanner) {
         System.out.print("Masukkan kode buku yang ingin diperbarui: ");
         String kode = scanner.nextLine();
-        for (Buku buku : daftarBuku) {
+        for (Buku buku : Buku.daftarBuku) {
             if (buku.getKodeBuku().equals(kode)) {
                 System.out.print("Masukkan judul baru: ");
                 buku.setJudulBuku(scanner.nextLine());
@@ -65,12 +66,12 @@ class Buku {
     public static void hapusBuku(Scanner scanner) {
         System.out.print("Masukkan kode buku yang ingin dihapus: ");
         String kode = scanner.nextLine();
-        daftarBuku.removeIf(buku -> buku.getKodeBuku().equals(kode));
+        Buku.daftarBuku.removeIf(buku -> buku.getKodeBuku().equals(kode));
         System.out.println("Buku berhasil dihapus.");
     }
 
     @Override
     public String toString() {
-        return "Kode: " + kodeBuku + ", Judul: " + judulBuku + ", Penulis: " + penulis;
+        return "Kode: " + this.kodeBuku + ", Judul: " + this.judulBuku + ", Penulis: " + this.penulis;
     }
 }

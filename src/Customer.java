@@ -20,15 +20,15 @@ class Customer {
         String nama = scanner.nextLine();
         System.out.print("Masukkan email: ");
         String email = scanner.nextLine();
-        daftarCustomer.add(new Customer(id, nama, email));
+        Customer.daftarCustomer.add(new Customer(id, nama, email));
         System.out.println("Customer berhasil ditambahkan.");
     }
 
     public static void tampilkanCustomer() {
-        if (daftarCustomer.isEmpty()) {
+        if (Customer.daftarCustomer.isEmpty()) {
             System.out.println("Tidak ada customer dalam daftar.");
         } else {
-            for (Customer customer : daftarCustomer) {
+            for (Customer customer : Customer.daftarCustomer) {
                 System.out.println(customer);
             }
         }
@@ -37,7 +37,7 @@ class Customer {
     public static void updateCustomer(Scanner scanner) {
         System.out.print("Masukkan ID customer yang ingin diperbarui: ");
         String id = scanner.nextLine();
-        for (Customer customer : daftarCustomer) {
+        for (Customer customer : Customer.daftarCustomer) {
             if (customer.idCustomer.equals(id)) {
                 System.out.print("Masukkan nama baru: ");
                 customer.nama = scanner.nextLine();
@@ -53,12 +53,12 @@ class Customer {
     public static void hapusCustomer(Scanner scanner) {
         System.out.print("Masukkan ID customer yang ingin dihapus: ");
         String id = scanner.nextLine();
-        daftarCustomer.removeIf(customer -> customer.idCustomer.equals(id));
+        Customer.daftarCustomer.removeIf(customer -> customer.idCustomer.equals(id));
         System.out.println("Customer berhasil dihapus.");
     }
 
     @Override
     public String toString() {
-        return "ID: " + idCustomer + ", Nama: " + nama + ", Email: " + email;
+        return "ID: " + this.idCustomer + ", Nama: " + this.nama + ", Email: " + this.email;
     }
 }
