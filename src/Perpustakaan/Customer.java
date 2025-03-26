@@ -63,12 +63,18 @@ public class Customer {
             }
         }
         System.out.println("Customer dengan id " + idCustomer + " tidak ditemukan");
-    }
+        }
 
-    public void hapusCustomer(Customer customer) {
-        this.customers.remove(customer);
-        System.out.println("Customer berhasil dihapus");
-    }
+        public void hapusCustomerById(int idCustomer) {
+        for (Customer customer : this.customers) {
+            if (customer.getIdCustomer() == idCustomer) {
+            this.customers.remove(customer);
+            System.out.println("Customer dengan id " + idCustomer + " berhasil dihapus");
+            return;
+            }
+        }
+        System.out.println("Customer dengan id " + idCustomer + " tidak ditemukan");
+        }
 
     private int idCounter = 1;
 
