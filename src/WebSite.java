@@ -1,6 +1,4 @@
-package Perpustakaan;
-
-public class WebSite {
+class WebSite {
     private String judulBuku;
     private String idAkun;
 
@@ -10,16 +8,15 @@ public class WebSite {
     }
 
     public String getJudulBuku() {
-        return this.judulBuku;
+        return judulBuku;
     }
 
     public void updateData(String judulBuku) {
         this.judulBuku = judulBuku;
-        System.out.println("Data Buku telah diupdate: " + this.judulBuku);
     }
-
-    public void tampilkanWebsite() {
-        System.out.println("Judul Buku di Website: " + this.getJudulBuku());
+    public void InputWebSite(){
+        WebSite website = new WebSite("Harry Potter", "ID1234");
+        System.out.println("Judul Buku di Website: " + website.getJudulBuku());
         System.out.println(" ");
     }
 }

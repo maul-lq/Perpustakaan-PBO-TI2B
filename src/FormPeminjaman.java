@@ -1,6 +1,4 @@
-package Perpustakaan;
-
-public class FormPeminjaman {
+class FormPeminjaman {
     private String jadwalPeminjaman;
     private String pengajuanPeminjaman;
 
@@ -10,11 +8,11 @@ public class FormPeminjaman {
     }
 
     public String getJadwalPeminjaman() {
-        return this.jadwalPeminjaman;
+        return jadwalPeminjaman;
     }
-
-    public void tampilkanPeminjaman() {
-        System.out.println("Jadwal Peminjaman: " + this.getJadwalPeminjaman());
+    public void InputPeminjaman(){
+        FormPeminjaman form = new FormPeminjaman("10 Maret 2025", "Pending");
+        System.out.println("Jadwal Peminjaman: " + form.getJadwalPeminjaman());
         System.out.println(" ");
     }
 }
